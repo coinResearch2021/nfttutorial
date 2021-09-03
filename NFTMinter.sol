@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0
+
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -7,7 +9,7 @@ contract NFT is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("CoinResearch", "CRC") {}
+    constructor() ERC721("CResearch", "CNR") {}
 
     mapping(uint => string) tokenURIs;
 
@@ -22,10 +24,9 @@ contract NFT is ERC721 {
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
+        _mint(to, newItemId);
         tokenURIs[newItemId] = tokenURI;
 
         return newItemId;
     }
 }
-
