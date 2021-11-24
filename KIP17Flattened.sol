@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0
+
+
 // Sources flattened with hardhat v2.6.8 https://hardhat.org
 
 // File contracts/introspection/IKIP13.sol
